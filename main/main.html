@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="./main-stylesheet.css" type="text/css" rel="stylesheet" >
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="./jQuerrysheet.js"></script>
+<script type="text/javascript">
+$(function () {
+if (navigator.userAgent.indexOf('Safari') != -1 &&
+    navigator.userAgent.indexOf('Chrome') == -1) {
+        $("body").addClass("safari");
+    }
+});
+</script>
+
+<script type="text/javascript">
+	$(function () {
+	    var ua = window.navigator.userAgent;
+	    var msie = ua.indexOf('MSIE ');
+    	var trident = ua.indexOf('Trident/');
+        var edge = ua.indexOf('Edge/');
+
+        if (msie > 0) {
+	  $('#male-img').attr('id','male-img-msie');
+	  $('#female-img').attr('id','female-img-msie');
+        }
+        if (trident > 0) {
+	  $('#male-img').attr('id','male-img-msie');
+	  $('#female-img').attr('id','female-img-msie');
+        }
+        if (edge > 0) {
+	  $('#male-img').attr('id','male-img-msie');
+	  $('#female-img').attr('id','female-img-msie');
+
+        }
+	});
+</script>
+<script type="text/javascript">
+$(window).on('resize', function(){
+      var win = $(this);
+      if (win.height() <= 675) {
+        $("#footer").hide();
+      }
+      else {
+        $("#footer").show();
+      }
+});
+</script>
+<title>British Shorthair cat examinator</title>
+</head>
+<body>
+  <div>
+  <h1>Choose a gender</h1>
+  </div>
+  <div class="main-wrapper">
+  	<div class="wrapper male">
+  		<div class="male">
+    		<p>Male</p>
+    		<img class="male" id="male-img" src="choose-me-male.jpg" alt="British Shorthair Male" />
+    		<a href="main-app/main-app-male/main-app-male.html" class="btn-male">Click Here!</a>
+ 		</div>
+    	</div>
+
+  	<div class="wrapper female">
+  		<div class="female">
+    		<p>Female</p>
+    		<img class="female" id="female-img" src="choose-me-female.png" alt="British Shorthair Female" />
+    		<a href="main-app/main-app-female/main-app-female.html" class="btn-female">Click Here!</a>
+    		</div>
+    	</div>
+  </div>
+
+  <footer id="footer">
+    <p class="footer"> Copyright 2017-2027. GP OF BLANK. All Rights Reserved. <a href="http://www.gpofblank.co.uk/contact/">Contact</a></p>
+  </footer>
+
+</body>
+</html>
